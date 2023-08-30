@@ -27,10 +27,10 @@ public class TestUtil {
 		requestParams.put("password", "123456");
 		
 		Response response = RestRequestUtil.responseWithTokenAndBody("post", null, requestParams, "/spree_oauth/token");
-		ResponseUtil.checkStatusIs200(response);
+		RestResponseUtil.checkStatusIs200(response);
 		
 		
-		String outh_token = ResponseUtil.getValue(response, "access_token");
+		String outh_token = RestResponseUtil.getValue(response, "access_token");
 		System.out.println("oAuth Token is =>  " + outh_token);
 		return outh_token;
 		
@@ -44,8 +44,8 @@ public class TestUtil {
 //		RequestSpecification req = RestAssuredUtil.auth2(accessToken);
 //		Response response = RestAssuredUtil.get(req, "/account");
 		Response response = RestRequestUtil.responseWithTokenAndBody("get", accessToken, null, "/account");
-		ResponseUtil.checkStatusIs200(response);
-		return ResponseUtil.getValue(response, "data.id");
+		RestResponseUtil.checkStatusIs200(response);
+		return RestResponseUtil.getValue(response, "data.id");
 	}
 	
 	public static JSONObject generateJSONAddress(String fName, String lName, String address1,

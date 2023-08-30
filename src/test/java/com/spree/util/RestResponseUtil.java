@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import java.util.ArrayList;
 import org.testng.Assert;
 
-public class ResponseUtil {
+public class RestResponseUtil {
 
     //Verify the http response status returned. Check Status Code is 200?
     public static void checkStatusIs200(Response res) {

@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.spree.testdata.*;
-import com.spree.util.ResponseUtil;
+import com.spree.util.RestResponseUtil;
 import com.spree.util.RestRequestUtil;
 import com.spree.util.TestUtil;
 
@@ -40,7 +40,7 @@ public class Address extends BaseTest {
 	//helper method
 	public Response getAllAddressIds() {
 		Response res = RestRequestUtil.responseWithTokenAndBody("get", accessToken, null, "/account/addresses");
-		ResponseUtil.checkStatusIs200(res);
+		RestResponseUtil.checkStatusIs200(res);
 		JsonPath jsonPathEva = res.getBody().jsonPath();
 		ArrayList<Map<String, String>> data = jsonPathEva.get("data");
 		addressIds.clear();
@@ -54,7 +54,7 @@ public class Address extends BaseTest {
 		getAllAddressIds();
 		for (String id: addressIds) {
 			Response res = RestRequestUtil.responseWithTokenAndBody("delete", accessToken, null, ("/account/addresses/" + id) );
-			ResponseUtil.checkStatusIs204(res);
+			RestResponseUtil.checkStatusIs204(res);
 		}
 	}
 	
@@ -64,8 +64,8 @@ public class Address extends BaseTest {
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country);
 		Response res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");
-		ResponseUtil.checkStatusIs200(res);
-		addressId = ResponseUtil.getValue(res, "data.id");
+		RestResponseUtil.checkStatusIs200(res);
+		addressId = RestResponseUtil.getValue(res, "data.id");
 	}
 	
 	@Test(dataProvider = "addressWithLabel", dataProviderClass = Spreecom_TestData.class, priority = 2)
@@ -76,13 +76,13 @@ public class Address extends BaseTest {
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country);
 		Response res = RestRequestUtil.responseWithTokenAndBody("patch", accessToken, body, ("/account/addresses/" + addressId));
-		ResponseUtil.checkStatusIs200(res);
+		RestResponseUtil.checkStatusIs200(res);
 	}
 	
 	@Test(priority = 3)
 	public void T03_deleteAnAddress() {
 		Response res = RestRequestUtil.responseWithTokenAndBody("delete", accessToken, null, ("/account/addresses/" + addressId) );
-		ResponseUtil.checkStatusIs204(res);
+		RestResponseUtil.checkStatusIs204(res);
 	}
 	
 	@Test(dataProvider = "Addresses", dataProviderClass = Spreecom_TestData.class, priority = 4)
@@ -91,14 +91,14 @@ public class Address extends BaseTest {
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country);
 		Response res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");
-		ResponseUtil.checkStatusIs200(res);
+		RestResponseUtil.checkStatusIs200(res);
 		res = getAllAddressIds();
 	}
 	
 	@Test(priority = 5)
 	public void T05_getAllAddressBeforeDeleteAll() {
 		Response res = getAllAddressIds();
-		ResponseUtil.checkValue(res, "meta.count", "5");
+		RestResponseUtil.checkValue(res, "meta.count", "5");
 	}
 	
 	@Test(priority = 6)
@@ -109,7 +109,7 @@ public class Address extends BaseTest {
 	@Test(priority = 7)
 	public void T07_getAllAddressAfterDeleteAll() {
 		Response res = getAllAddressIds();
-		ResponseUtil.checkValue(res, "meta.count", "0");
+		RestResponseUtil.checkValue(res, "meta.count", "0");
 	}
 	
 	@Test(dataProvider = "addressWithLabel", dataProviderClass = Spreecom_TestData.class,priority = 8)
@@ -118,13 +118,13 @@ public class Address extends BaseTest {
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country, label);
 		Response res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");
-		ResponseUtil.checkStatusIs200(res);
+		RestResponseUtil.checkStatusIs200(res);
 		
 		body = TestUtil.generateJSONAddress("NewFname", "NewLname", address1, city, 
 				zipcode, phone, state, country, label);
 		res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");
-		ResponseUtil.checkStatusIs422(res);
-		ResponseUtil.checkValue(res, "error", "Address name has already been taken");
+		RestResponseUtil.checkStatusIs422(res);
+		RestResponseUtil.checkValue(res, "error", "Address name has already been taken");
 	}
 
 }
