@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-30T21:24:56 UTC" name="Default suite" finished-at="2023-08-30T21:25:01 UTC" duration-ms="5040">
+    <groups>
+    </groups>
+    <test started-at="2023-08-30T21:24:56 UTC" name="Default test" finished-at="2023-08-30T21:25:01 UTC" duration-ms="5040">
+      <class name="com.spree.test.Address">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:24:56 UTC" name="setup" finished-at="2023-08-30T21:24:56 UTC" duration-ms="334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="pre_condition()[pri:0, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:24:56 UTC" name="pre_condition" finished-at="2023-08-30T21:24:59 UTC" duration-ms="2931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pre_condition -->
+        <test-method signature="addAddressSameLabel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:24:59 UTC" name="addAddressSameLabel" data-provider="addressWithLabel" finished-at="2023-08-30T21:25:01 UTC" duration-ms="1742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Minh1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[N1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[100 1st St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dallas]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[75001]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TX]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Work]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAddressSameLabel -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:25:01 UTC" name="afterTest" finished-at="2023-08-30T21:25:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.spree.test.Address -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
