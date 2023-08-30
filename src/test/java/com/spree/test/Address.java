@@ -61,6 +61,7 @@ public class Address extends BaseTest {
 	@Test(dataProvider = "addressWithLabel", dataProviderClass = Spreecom_TestData.class, priority = 1)
 	public void T01_createAnAddress(String fName, String lName, String address1, String city, String zipcode,
 			String phone, String state, String country, String label) {
+		test = extent.createTest("Test case 1", "Create an address");
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country);
 		Response res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");
@@ -71,7 +72,7 @@ public class Address extends BaseTest {
 	@Test(dataProvider = "addressWithLabel", dataProviderClass = Spreecom_TestData.class, priority = 2)
 	public void T02_updateAddress(String fName, String lName, String address1, String city, String zipcode,
 			String phone, String state, String country, String label) {
-		
+		test = extent.createTest("Test case 2", "Update an address");
 		fName = "NewMinh";
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country);
@@ -81,6 +82,7 @@ public class Address extends BaseTest {
 	
 	@Test(priority = 3)
 	public void T03_deleteAnAddress() {
+		test = extent.createTest("Test case 3", "Delete an address");
 		Response res = RestRequestUtil.responseWithTokenAndBody("delete", accessToken, null, ("/account/addresses/" + addressId) );
 		RestResponseUtil.checkStatusIs204(res);
 	}
@@ -88,6 +90,7 @@ public class Address extends BaseTest {
 	@Test(dataProvider = "Addresses", dataProviderClass = Spreecom_TestData.class, priority = 4)
 	public void T04_addMultipleAddress(String fName, String lName, String address1, String city, String phone,
 			String zipcode, String state, String country) {
+		test = extent.createTest("Test case 4", "Add multiple addresses");
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country);
 		Response res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");
@@ -97,17 +100,20 @@ public class Address extends BaseTest {
 	
 	@Test(priority = 5)
 	public void T05_getAllAddressBeforeDeleteAll() {
+		test = extent.createTest("Test case 5", "Get all addresses before deleting all");
 		Response res = getAllAddressIds();
 		RestResponseUtil.checkValue(res, "meta.count", "5");
 	}
 	
 	@Test(priority = 6)
 	public void T06_deleteAllAddress() {
+		test = extent.createTest("Test case 6", "Deleting all addresses");
 		deleteAllAddresses();
 	}
 	
 	@Test(priority = 7)
 	public void T07_getAllAddressAfterDeleteAll() {
+		test = extent.createTest("Test case 7", "Get all addresses after deleting all");
 		Response res = getAllAddressIds();
 		RestResponseUtil.checkValue(res, "meta.count", "0");
 	}
@@ -115,6 +121,7 @@ public class Address extends BaseTest {
 	@Test(dataProvider = "addressWithLabel", dataProviderClass = Spreecom_TestData.class,priority = 8)
 	public void addAddressSameLabel(String fName, String lName, String address1, String city, String zipcode,
 			String phone, String state, String country, String label) {
+		test = extent.createTest("Test case 8", "Add address with same label");
 		JSONObject body = TestUtil.generateJSONAddress(fName, lName, address1, city, 
 				zipcode, phone, state, country, label);
 		Response res = RestRequestUtil.responseWithTokenAndBody("post", accessToken, body, "/account/addresses");

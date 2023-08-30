@@ -10,16 +10,27 @@
           <include name="T06_deleteAllAddress"/>
           <include name="T04_addMultipleAddress"/>
           <include name="T05_getAllAddressBeforeDeleteAll"/>
-          <include name="T01_createAnAddress"/>
-          <include name="T03_deleteAnAddress"/>
           <include name="pre_condition"/>
+          <include name="SetUp"/>
+          <include name="T03_deleteAnAddress"/>
           <include name="post_condition"/>
           <include name="setup"/>
+          <include name="tearDown"/>
           <include name="afterTest"/>
           <include name="T02_updateAddress"/>
           <include name="addAddressSameLabel"/>
         </methods>
       </class> <!-- com.spree.test.Address -->
+      <class name="com.spree.test.Countries">
+        <methods>
+          <include name="T02_retrieveaCountry"/>
+          <include name="SetUp"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="afterTest"/>
+          <include name="T03_listallCountries"/>
+        </methods>
+      </class> <!-- com.spree.test.Countries -->
     </classes>
   </test> <!-- test-1(failed) -->
 </suite> <!-- Failed suite [RestAssured API Automation Framework] -->

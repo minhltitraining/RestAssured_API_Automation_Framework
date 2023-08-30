@@ -2,7 +2,7 @@
 <suite name="RestAssured API Automation Framework">
 <!--	<parameter name="appURL"-->
 <!--		value="https://demo.spreecommerce.org/" />-->
-	<parameter name="browserType" value="edge" />
+<!--	<parameter name="browserType" value="edge" />-->
 	<test name="test-1">
 		<classes>
 			<class name="com.spree.test.Countries" />

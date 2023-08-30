@@ -1,8 +1,17 @@
-package com.spree.test;
+package com.spree.common;
 
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+
+import org.apache.commons.io.FileUtils;
+
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -11,28 +20,15 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.spree.util.*;
 
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
-import org.json.simple.parser.ParseException;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+public class BaseSetup {
 
-public class BaseTest {
-
-	public Response res = null; //Response
-    public JsonPath jp  = null; //JsonPath
-    static ExtentSparkReporter htmlReporter;
+	static ExtentSparkReporter htmlReporter;
 	protected static ExtentReports extent;
 	protected static ExtentTest test;
-	String extendReportPath = "/test-output/ExtentReportResults_Spreecom_API.html";
-   
+	String extendReportPath = "/test-output/ExtentReportResults_Spreecom.html";
 
 	@BeforeTest
 	public void SetUp() {
@@ -41,29 +37,33 @@ public class BaseTest {
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("OS", "Windows 10");
 		extent.setSystemInfo("browser", "Chrome");
-		htmlReporter.config().setDocumentTitle("Extend Report For Spreecom API Tests");
-		htmlReporter.config().setReportName("Extend Report For Spreecom API Tests");
+
+		htmlReporter.config().setDocumentTitle("Extend Report For Spreecom Tests");
+		htmlReporter.config().setReportName("Extend Report For Spreecom Tests");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')' ");
 	}
 
-    @BeforeClass
-    public void setup() throws FileNotFoundException, IOException, ParseException {
-        //Test Setup
-    	RestRequestUtil.setBaseURI(); //Setup Base URI
-        RestRequestUtil.setBasePath("/api/v2/storefront"); //Setup Base Path
-//        RestAssuredUtil.setContentType(ContentType.JSON); //Setup Content Type
-    }
+//	@Parameters({ "browserType", "appURL" })
+//	@BeforeClass
+//	public void initializeTestBaseSetup(String browserType, String appURL) {
+//		try {
+//			setDriver(browserType, appURL);
+//
+//		} catch (Exception e) {
+//			System.out.println("Error....." + e.getStackTrace());
+//		}
+//	}
+//
+//	@AfterClass
+//	public void tearDown() throws InterruptedException {
+//		driver.quit();
+//		Thread.sleep(1000);
+//		extent.flush();
+//	}
 
-    @AfterClass
-    public void afterTest() {
-        //Reset Values
-    	RestRequestUtil.resetBaseURI();
-    	RestRequestUtil.resetBasePath();
-    	extent.flush();
-    }
-    
-    @AfterMethod
+	// It will execute after every test execution
+	@AfterMethod
 	public void tearDown(ITestResult result) {
 
 		if (ITestResult.FAILURE == result.getStatus()) {
@@ -79,4 +79,3 @@ public class BaseTest {
 		}
 	}
 }
-
