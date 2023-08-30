@@ -18,24 +18,22 @@ public class BaseTest {
 	public Response res = null; //Response
     public JsonPath jp  = null; //JsonPath
 
-    //Instantiate a Helper Test Methods (testUtils) Object
-    ResponseUtil statusCodeUtil = new ResponseUtil();
-
+   
 
 
     @BeforeClass
     public void setup() throws FileNotFoundException, IOException, ParseException {
         //Test Setup
-    	RestAssuredUtil.setBaseURI(); //Setup Base URI
-        RestAssuredUtil.setBasePath("/api/v2/storefront"); //Setup Base Path
+    	RestRequestUtil.setBaseURI(); //Setup Base URI
+        RestRequestUtil.setBasePath("/api/v2/storefront"); //Setup Base Path
 //        RestAssuredUtil.setContentType(ContentType.JSON); //Setup Content Type
     }
 
     @AfterClass
     public void afterTest() {
         //Reset Values
-        RestAssuredUtil.resetBaseURI();
-        RestAssuredUtil.resetBasePath();
+    	RestRequestUtil.resetBaseURI();
+    	RestRequestUtil.resetBasePath();
     }
 }
 

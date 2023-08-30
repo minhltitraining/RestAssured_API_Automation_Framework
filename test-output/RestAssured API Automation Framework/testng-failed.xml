@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RestAssured API Automation Framework]" guice-stage="DEVELOPMENT">
+  <parameter name="browserType" value="edge"/>
+  <test thread-count="5" name="test-1(failed)">
+    <classes>
+      <class name="com.spree.test.Address">
+        <methods>
+          <include name="T07_getAllAddressAfterDeleteAll"/>
+          <include name="T06_deleteAllAddress"/>
+          <include name="T04_addMultipleAddress"/>
+          <include name="T05_getAllAddressBeforeDeleteAll"/>
+          <include name="T01_createAnAddress"/>
+          <include name="T03_deleteAnAddress"/>
+          <include name="pre_condition"/>
+          <include name="post_condition"/>
+          <include name="setup"/>
+          <include name="afterTest"/>
+          <include name="T02_updateAddress"/>
+          <include name="addAddressSameLabel"/>
+        </methods>
+      </class> <!-- com.spree.test.Address -->
+    </classes>
+  </test> <!-- test-1(failed) -->
+</suite> <!-- Failed suite [RestAssured API Automation Framework] -->

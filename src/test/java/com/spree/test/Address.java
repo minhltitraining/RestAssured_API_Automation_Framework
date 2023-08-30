@@ -7,16 +7,14 @@ import java.util.Map;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.spree.testdata.*;
 import com.spree.util.ResponseUtil;
-import com.spree.util.RestAssuredUtil;
 import com.spree.util.RestRequestUtil;
 import com.spree.util.TestUtil;
 
-import io.restassured.RestAssured;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -28,7 +26,7 @@ public class Address extends BaseTest {
 	@BeforeClass
 	public void pre_condition() {
 		accessToken = TestUtil.oAuth_Token(); 
-        RestAssuredUtil.setBasePath("/api/v2/storefront");
+		RestRequestUtil.setBasePath("/api/v2/storefront");
         addressIds = new ArrayList<>();
         deleteAllAddresses();
 	}

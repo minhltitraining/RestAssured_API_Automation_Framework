@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spree.test.Address">
+      <class name="com.spree.test.MIsc">
         <methods>
-          <include name="T06_deleteAllAddress"/>
-          <include name="pre_condition"/>
-          <include name="setup"/>
-          <include name="afterTest"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.spree.test.Address -->
+      </class> <!-- com.spree.test.MIsc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

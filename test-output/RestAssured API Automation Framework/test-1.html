@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>TestNG:  test-1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>test-1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 30 22:40:17 UTC 2023</td>
+</tr>
+<tr><td>Total time:</td><td>29 seconds (29175 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.spree.test.Countries.T01_getDefaultCountries()'><b>T01_getDefaultCountries</b><br>Test class: com.spree.test.Countries</td>
+<td></td>
+<td>2</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Countries.T02_retrieveaCountry()'><b>T02_retrieveaCountry</b><br>Test class: com.spree.test.Countries<br>Parameters: gb, UNITED KINGDOM, GBR</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Address.T04_addMultipleAddress()'><b>T04_addMultipleAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Komal, K, 213 Main St, Phoenix, 0987654321, 12030, AZ, US</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.addAddressSameLabel()'><b>addAddressSameLabel</b><br>Test class: com.spree.test.Address<br>Parameters: Minh1, N1, 100 1st St, Dallas, 75001, 1, TX, US, Work</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Countries.T02_retrieveaCountry()'><b>T02_retrieveaCountry</b><br>Test class: com.spree.test.Countries<br>Parameters: usa, UNITED STATES, USA</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Address.T04_addMultipleAddress()'><b>T04_addMultipleAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Wendy, W, 473 Lincoln Dr, SF, 0987654321, 93473, CA, US</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.T02_updateAddress()'><b>T02_updateAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Minh1, N1, 100 1st St, Dallas, 75001, 1, TX, US, Work</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.T04_addMultipleAddress()'><b>T04_addMultipleAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Lily, N, 903 South Dr, Chicago, 0987654321, 58320, IL, US</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.T04_addMultipleAddress()'><b>T04_addMultipleAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Dean, B, 468 Mori Ln, Houston, 0987654321, 93717, TX, US</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Countries.T02_retrieveaCountry()'><b>T02_retrieveaCountry</b><br>Test class: com.spree.test.Countries<br>Parameters: ind, INDIA, IND</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Address.T01_createAnAddress()'><b>T01_createAnAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Minh1, N1, 100 1st St, Dallas, 75001, 1, TX, US, Work</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.T03_deleteAnAddress()'><b>T03_deleteAnAddress</b><br>Test class: com.spree.test.Address</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.T06_deleteAllAddress()'><b>T06_deleteAllAddress</b><br>Test class: com.spree.test.Address</td>
+<td></td>
+<td>4</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Countries.T02_retrieveaCountry()'><b>T02_retrieveaCountry</b><br>Test class: com.spree.test.Countries<br>Parameters: afg, AFGHANISTAN, AFG</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Countries.T03_listallCountries()'><b>T03_listallCountries</b><br>Test class: com.spree.test.Countries</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Address.T05_getAllAddressBeforeDeleteAll()'><b>T05_getAllAddressBeforeDeleteAll</b><br>Test class: com.spree.test.Address</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Countries.T02_retrieveaCountry()'><b>T02_retrieveaCountry</b><br>Test class: com.spree.test.Countries<br>Parameters: pak, PAKISTAN, PAK</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Countries@17f7cd29</td></tr>
+<tr>
+<td title='com.spree.test.Address.T07_getAllAddressAfterDeleteAll()'><b>T07_getAllAddressAfterDeleteAll</b><br>Test class: com.spree.test.Address</td>
+<td></td>
+<td>0</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+<tr>
+<td title='com.spree.test.Address.T04_addMultipleAddress()'><b>T04_addMultipleAddress</b><br>Test class: com.spree.test.Address<br>Parameters: Sam, P, 229 Fox Ln, Austin, 0987654321, 75030, TX, US</td>
+<td></td>
+<td>1</td>
+<td>com.spree.test.Address@26b3fd41</td></tr>
+</table><p>
+</body>
+</html>

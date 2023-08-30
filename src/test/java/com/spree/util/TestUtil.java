@@ -18,22 +18,19 @@ import io.restassured.specification.RequestSpecification;
 public class TestUtil {
 
 	public static String oAuth_Token() {
-		RestAssuredUtil.setBaseURI();
-		RestAssuredUtil.setBasePath("");
+		RestRequestUtil.setBaseURI();
+		RestRequestUtil.setBasePath("");
 		
 		JSONObject requestParams = new JSONObject();
 		requestParams.put("grant_type", "password");
 		requestParams.put("username", "minh@spree.com");
 		requestParams.put("password", "123456");
-	
-		RequestSpecification request = RestAssuredUtil.setContentTypeJSONAndBody(requestParams);
-		Response response = RestAssuredUtil.post(request, "/spree_oauth/token");
 		
+		Response response = RestRequestUtil.responseWithTokenAndBody("post", null, requestParams, "/spree_oauth/token");
 		ResponseUtil.checkStatusIs200(response);
-		String responseBody = response.getBody().asString();
-		System.out.println(response.prettyPrint());
-		JsonPath jsonPathEvaluator = response.getBody().jsonPath();
-		String outh_token = jsonPathEvaluator.get("access_token").toString();
+		
+		
+		String outh_token = ResponseUtil.getValue(response, "access_token");
 		System.out.println("oAuth Token is =>  " + outh_token);
 		return outh_token;
 		
@@ -41,11 +38,12 @@ public class TestUtil {
 
 	//get userID given accessToken
 	public static String getUserId(String accessToken) {
-		RestAssuredUtil.setBaseURI();
-		RestAssuredUtil.setBasePath("/api/v2/storefront");
-//		RestAssuredUtil.auth2(accessToken);
-		RequestSpecification req = RestAssuredUtil.auth2(accessToken);
-		Response response = RestAssuredUtil.get(req, "/account");
+		RestRequestUtil.setBaseURI();
+		RestRequestUtil.setBasePath("/api/v2/storefront");
+
+//		RequestSpecification req = RestAssuredUtil.auth2(accessToken);
+//		Response response = RestAssuredUtil.get(req, "/account");
+		Response response = RestRequestUtil.responseWithTokenAndBody("get", accessToken, null, "/account");
 		ResponseUtil.checkStatusIs200(response);
 		return ResponseUtil.getValue(response, "data.id");
 	}

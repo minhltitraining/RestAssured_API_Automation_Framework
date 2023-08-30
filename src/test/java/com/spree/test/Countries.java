@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.path.json.JsonPath;
-import com.spree.util.RestAssuredUtil;
 import com.spree.util.RestRequestUtil;
 import com.spree.testdata.Spreecom_TestData;
 import com.spree.util.ResponseUtil;
