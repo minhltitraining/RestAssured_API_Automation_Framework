@@ -1,21 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-30T21:24:56 UTC" name="Default suite" finished-at="2023-08-30T21:25:01 UTC" duration-ms="5040">
+  <suite started-at="2023-08-30T22:02:01 UTC" name="Default suite" finished-at="2023-08-30T22:02:29 UTC" duration-ms="28627">
     <groups>
     </groups>
-    <test started-at="2023-08-30T21:24:56 UTC" name="Default test" finished-at="2023-08-30T21:25:01 UTC" duration-ms="5040">
+    <test started-at="2023-08-30T22:02:01 UTC" name="Default test" finished-at="2023-08-30T22:02:29 UTC" duration-ms="28627">
       <class name="com.spree.test.Address">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:24:56 UTC" name="setup" finished-at="2023-08-30T21:24:56 UTC" duration-ms="334" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:01 UTC" name="setup" finished-at="2023-08-30T22:02:01 UTC" duration-ms="335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="pre_condition()[pri:0, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:24:56 UTC" name="pre_condition" finished-at="2023-08-30T21:24:59 UTC" duration-ms="2931" status="PASS">
+        <test-method is-config="true" signature="pre_condition()[pri:0, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:01 UTC" name="pre_condition" finished-at="2023-08-30T22:02:04 UTC" duration-ms="3111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pre_condition -->
-        <test-method signature="addAddressSameLabel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:24:59 UTC" name="addAddressSameLabel" data-provider="addressWithLabel" finished-at="2023-08-30T21:25:01 UTC" duration-ms="1742" status="PASS">
+        <test-method signature="T01_createAnAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:04 UTC" name="T01_createAnAddress" data-provider="addressWithLabel" finished-at="2023-08-30T22:02:05 UTC" duration-ms="1019" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Minh1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[N1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[100 1st St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dallas]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[75001]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TX]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Work]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T01_createAnAddress -->
+        <test-method signature="T02_updateAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:05 UTC" name="T02_updateAddress" data-provider="addressWithLabel" finished-at="2023-08-30T22:02:06 UTC" duration-ms="782" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Minh1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[N1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[100 1st St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dallas]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[75001]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TX]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Work]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T02_updateAddress -->
+        <test-method signature="T03_deleteAnAddress()[pri:3, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:06 UTC" name="T03_deleteAnAddress" finished-at="2023-08-30T22:02:07 UTC" duration-ms="744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T03_deleteAnAddress -->
+        <test-method signature="T04_addMultipleAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:07 UTC" name="T04_addMultipleAddress" data-provider="Addresses" finished-at="2023-08-30T22:02:08 UTC" duration-ms="1564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Komal]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[K]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[213 Main St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Phoenix]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0987654321]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12030]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[AZ]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T04_addMultipleAddress -->
+        <test-method signature="T04_addMultipleAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:08 UTC" name="T04_addMultipleAddress" data-provider="Addresses" finished-at="2023-08-30T22:02:10 UTC" duration-ms="1502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lily]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[903 South Dr]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Chicago]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0987654321]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[58320]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[IL]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T04_addMultipleAddress -->
+        <test-method signature="T04_addMultipleAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:10 UTC" name="T04_addMultipleAddress" data-provider="Addresses" finished-at="2023-08-30T22:02:11 UTC" duration-ms="1495" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dean]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[468 Mori Ln]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Houston]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0987654321]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[93717]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TX]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T04_addMultipleAddress -->
+        <test-method signature="T04_addMultipleAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:11 UTC" name="T04_addMultipleAddress" data-provider="Addresses" finished-at="2023-08-30T22:02:13 UTC" duration-ms="1556" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Wendy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[W]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[473 Lincoln Dr]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[SF]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0987654321]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[93473]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[CA]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T04_addMultipleAddress -->
+        <test-method signature="T04_addMultipleAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:13 UTC" name="T04_addMultipleAddress" data-provider="Addresses" finished-at="2023-08-30T22:02:15 UTC" duration-ms="1669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[P]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[229 Fox Ln]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Austin]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0987654321]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[75030]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TX]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T04_addMultipleAddress -->
+        <test-method signature="T05_getAllAddressBeforeDeleteAll()[pri:5, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:15 UTC" name="T05_getAllAddressBeforeDeleteAll" finished-at="2023-08-30T22:02:15 UTC" duration-ms="757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T05_getAllAddressBeforeDeleteAll -->
+        <test-method signature="T06_deleteAllAddress()[pri:6, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:15 UTC" name="T06_deleteAllAddress" finished-at="2023-08-30T22:02:26 UTC" duration-ms="10260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T06_deleteAllAddress -->
+        <test-method signature="T07_getAllAddressAfterDeleteAll()[pri:7, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:26 UTC" name="T07_getAllAddressAfterDeleteAll" finished-at="2023-08-30T22:02:26 UTC" duration-ms="798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T07_getAllAddressAfterDeleteAll -->
+        <test-method signature="addAddressSameLabel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:8, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:26 UTC" name="addAddressSameLabel" data-provider="addressWithLabel" finished-at="2023-08-30T22:02:28 UTC" duration-ms="1559" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,7 +414,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAddressSameLabel -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.spree.test.Address@71e9ddb4]" started-at="2023-08-30T21:25:01 UTC" name="afterTest" finished-at="2023-08-30T21:25:01 UTC" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="post_condition()[pri:0, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:28 UTC" name="post_condition" finished-at="2023-08-30T22:02:29 UTC" duration-ms="1428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post_condition -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.spree.test.Address@1190200a]" started-at="2023-08-30T22:02:29 UTC" name="afterTest" finished-at="2023-08-30T22:02:29 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
